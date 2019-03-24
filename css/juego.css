@@ -22,6 +22,7 @@ li::before {
 .col-40 h1 {
   font-size: 20px;
   color: #E84A5F;
+  text-align: center;
 }
 
 .col-40, .col-60 {
