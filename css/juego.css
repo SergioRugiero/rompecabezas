@@ -36,6 +36,12 @@ li::before {
   width: 40%;
 }
 
+.col-40 img{
+  height: 75%;
+  width: 75%;
+}
+
+
 .col-60 {
   background: #E84A5F;
   width: 60%;
@@ -60,9 +66,9 @@ li::before {
 }
 
 .piezas img{
-  max-width: 33.333%;
-  max-height: 33.333%;
+  max-width: 33%;
   float: left;
+  padding: 1px;
 }
 
 @keyframes fadein {
