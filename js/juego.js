@@ -21,7 +21,9 @@ Cada elemento de este arreglo deberá ser mostrado en la lista con id 'lista-ins
 Para eso deberás usar la función ya implementada mostrarInstruccionEnLista().
 Podés ver su implementación en la ultima parte de este codigo. */
 function mostrarInstrucciones(instrucciones) {
-  mostrarInstruccionEnLista(instrucciones, "lista-instrucciones");//COMPLETAR
+  for (var i = 0; i < instrucciones.length; i++) {
+    mostrarInstruccionEnLista(instrucciones[i], "lista-instrucciones");//COMPLETAR
+  }
 }
 
 /* COMPLETAR: Crear función que agregue la última dirección al arreglo de movimientos
