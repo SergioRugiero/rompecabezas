@@ -37,7 +37,7 @@ function chequearSiGano() {
 
 // Implementar alguna forma de mostrar un cartel que avise que ganaste el juego
 function mostrarCartelGanador() {
-    //COMPLETAR
+  alert("¡Felicitaciones lo haz logrado!");  //COMPLETAR
 }
 
 /* Función que intercambia dos posiciones en la grilla.
