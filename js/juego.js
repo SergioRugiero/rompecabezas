@@ -27,7 +27,13 @@ function mostrarInstrucciones(instrucciones) {
 }
 
 /* COMPLETAR: Crear función que agregue la última dirección al arreglo de movimientos
+
 y utilice actualizarUltimoMovimiento para mostrarlo en pantalla */
+function addLastMoveToMovimientos(movimiento){
+  movimientos.push(movimiento);
+  actualizarUltimoMovimiento(movimiento);
+  console.log("Grilla:" +grilla);
+}
 
 /* Esta función va a chequear si el Rompecabezas esta en la posicion ganadora.
 Existen diferentes formas de hacer este chequeo a partir de la grilla. */
@@ -37,7 +43,7 @@ function chequearSiGano() {
 
 // Implementar alguna forma de mostrar un cartel que avise que ganaste el juego
 function mostrarCartelGanador() {
-  alert("¡Felicitaciones lo haz logrado!");  //COMPLETAR
+  alert("¡Felicitaciones lo haz logrado!");
 }
 
 /* Función que intercambia dos posiciones en la grilla.
@@ -85,11 +91,15 @@ function moverEnDireccion(direccion) {
 
   // Mueve pieza hacia la derecha, reemplazandola con la blanca
   else if (direccion === codigosDireccion.DERECHA) {
-    //COMPLETAR
+    nuevaFilaPiezaVacia = filaVacia;
+    nuevaColumnaPiezaVacia = columnaVacia - 1;
   }
 
   // Mueve pieza hacia la izquierda, reemplazandola con la blanca
   else if (direccion === codigosDireccion.IZQUIERDA) {
+    nuevaFilaPiezaVacia = filaVacia;
+    nuevaColumnaPiezaVacia = columnaVacia + 1;
+
     // COMPLETAR
   }
 
@@ -101,7 +111,6 @@ function moverEnDireccion(direccion) {
         intercambiarPosiciones(filaVacia, columnaVacia, nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
         actualizarPosicionVacia(nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
 
-  //COMPLETAR: Agregar la dirección del movimiento al arreglo de movimientos
 
     }
 }
