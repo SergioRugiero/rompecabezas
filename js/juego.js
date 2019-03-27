@@ -32,7 +32,6 @@ y utilice actualizarUltimoMovimiento para mostrarlo en pantalla */
 function addLastMoveToMovimientos(movimiento){
   movimientos.push(movimiento);
   actualizarUltimoMovimiento(movimiento);
-  console.log("Grilla:" +grilla);
 }
 
 /* Esta función va a chequear si el Rompecabezas esta en la posicion ganadora.
