@@ -70,6 +70,8 @@ function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPo
 
 // Actualiza la posición de la pieza vacía
 function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
+    filaVacia = nuevaFila;
+    columnaVacia = nuevaFila;
     //COMPLETAR
 }
 
