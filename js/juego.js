@@ -37,7 +37,9 @@ function addLastMoveToMovimientos(movimiento){
 /* Esta función va a chequear si el Rompecabezas esta en la posicion ganadora.
 Existen diferentes formas de hacer este chequeo a partir de la grilla. */
 function chequearSiGano() {
-    //COMPLETAR
+    if (grilla.toString()=== "1,2,3,4,5,6,7,8,9"){
+      return true;
+    }
 }
 
 // Implementar alguna forma de mostrar un cartel que avise que ganaste el juego
@@ -56,6 +58,13 @@ En vez de intercambiar esos valores vamos a terminar teniendo en ambas posicione
 Se te ocurre cómo solucionar esto con una variable temporal?
 */
 function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPos2) {
+    pos1 = grilla[filaPos1][columnaPos1];
+    console.log(pos1);
+    pos2 = grilla[filaPos2][columnaPos2];
+    console.log(pos2);
+    grilla[filaPos1][columnaPos1]=grilla[filaPos2][columnaPos2];
+    grilla[filaPos2][columnaPos2]=pos1;
+    console.log(grilla.toString());
     //COMPLETAR
 }
 
