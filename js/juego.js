@@ -71,14 +71,18 @@ function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPo
 // Actualiza la posición de la pieza vacía
 function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
     filaVacia = nuevaFila;
-    columnaVacia = nuevaFila;
+    columnaVacia = nuevaColumna;
     //COMPLETAR
 }
 
 
-// Para chequear si la posicón está dentro de la grilla.
+// Para chequear si la posición está dentro de la grilla.
 function posicionValida(fila, columna) {
-    //COMPLETAR
+    if (true) {
+
+    }else {
+
+    }//COMPLETAR
 }
 
 /* Movimiento de fichas, en este caso la que se mueve es la blanca intercambiando su posición con otro elemento.
