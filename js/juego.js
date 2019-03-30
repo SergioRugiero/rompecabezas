@@ -78,13 +78,9 @@ function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
 // Para chequear si la posición está dentro de la grilla.
 function posicionValida(fila, columna) {
     var result = false;
-    if (0 <= fila && fila <= 2 && 0 <= columna && columna <= 2) {
+    if (fila >= 0 && fila <= 2 && columna >= 0 && columna <= 2) {
       result = true;
-      console.log("valido");
-      return posicionValida;
-    }else{
-      result = false;
-      console.log("no valido");
+      console.log(result);
       return posicionValida;
     }
 }
@@ -99,24 +95,28 @@ function moverEnDireccion(direccion) {
   if (direccion === codigosDireccion.ABAJO) {
     nuevaFilaPiezaVacia = filaVacia - 1;
     nuevaColumnaPiezaVacia = columnaVacia;
+    console.log("movi abajo " + nuevaFilaPiezaVacia + " " + nuevaColumnaPiezaVacia);
   }
 
   // Mueve pieza hacia arriba, reemplazandola con la blanca
   else if (direccion === codigosDireccion.ARRIBA) {
     nuevaFilaPiezaVacia = filaVacia + 1;
     nuevaColumnaPiezaVacia = columnaVacia;
+    console.log("movi arriba " + nuevaFilaPiezaVacia + " " + nuevaColumnaPiezaVacia);
   }
 
   // Mueve pieza hacia la derecha, reemplazandola con la blanca
   else if (direccion === codigosDireccion.DERECHA) {
     nuevaFilaPiezaVacia = filaVacia;
     nuevaColumnaPiezaVacia = columnaVacia + 1;
+    console.log("movi a la derecha " + nuevaFilaPiezaVacia + " " + nuevaColumnaPiezaVacia);
   }
 
   // Mueve pieza hacia la izquierda, reemplazandola con la blanca
   else if (direccion === codigosDireccion.IZQUIERDA) {
     nuevaFilaPiezaVacia = filaVacia;
     nuevaColumnaPiezaVacia = columnaVacia - 1;
+    console.log("movi a la izquierda " + nuevaFilaPiezaVacia + " " + nuevaColumnaPiezaVacia);
   }
 
   /* A continuación se chequea si la nueva posición es válida, si lo es, se intercambia.
