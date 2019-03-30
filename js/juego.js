@@ -38,7 +38,7 @@ function addLastMoveToMovimientos(movimiento){
 Existen diferentes formas de hacer este chequeo a partir de la grilla. */
 function chequearSiGano() {
     let grillaGanadora = "1,2,3,4,5,6,7,8,9";
-    if (grilla.toString()=== grillaGanadora ){
+    if (grilla.toString() === grillaGanadora ){
       return true;
     }
 }
@@ -60,10 +60,10 @@ Se te ocurre cómo solucionar esto con una variable temporal?
 */
 function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPos2) {
     console.log("grilla antes de tocarla "+grilla.toString());
-    pos1 = grilla[filaPos1][columnaPos1];
-    pos2 = grilla[filaPos2][columnaPos2];
-    grilla[filaPos1][columnaPos1]=grilla[filaPos2][columnaPos2];
-    grilla[filaPos2][columnaPos2]=pos1;
+    var pos1 = grilla[filaPos1][columnaPos1];
+    var pos2 = grilla[filaPos2][columnaPos2];
+    grilla[filaPos1][columnaPos1] = grilla[filaPos2][columnaPos2];
+    grilla[filaPos2][columnaPos2] = pos1;
     console.log("grilla despues de tocarla "+grilla.toString());
 }
 
@@ -71,14 +71,14 @@ function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPo
 function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
     filaVacia = nuevaFila;
     columnaVacia = nuevaColumna;
-    console.log("fila vacia "+ nuevaFila+ " columna vacia" + nuevaColumna);
+    console.log("fila vacia "+ nuevaFila+ " columna vacia " + nuevaColumna);
 }
 
 
 // Para chequear si la posición está dentro de la grilla.
 function posicionValida(fila, columna) {
-    let result = false;
-    if (0<= fila && fila <= 2 && 0 <= columna && columna <= 2) {
+    var result = false;
+    if (0 <= fila && fila <= 2 && 0 <= columna && columna <= 2) {
       result = true;
       console.log("valido");
     }else{
@@ -127,7 +127,7 @@ function moverEnDireccion(direccion) {
         actualizarPosicionVacia(nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
 
   //COMPLETAR: Agregar la dirección del movimiento al arreglo de movimientos
-  addLastMoveToMovimientos(direccion);
+    addLastMoveToMovimientos(direccion);
     }
 }
 
@@ -251,7 +251,7 @@ function capturarTeclas() {
         var gano = chequearSiGano();
         if (gano) {
           setTimeout(function() {
-              //mostrarCartelGanador(); anulado el ganar
+              mostrarCartelGanador();// anulado el ganar
               }, 500);
             }
             evento.preventDefault();
