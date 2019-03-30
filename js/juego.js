@@ -71,7 +71,7 @@ function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPo
 function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
     filaVacia = nuevaFila;
     columnaVacia = nuevaColumna;
-    console.log("fila vacia "+ nuevaFila+ " columna " + nuevaColumna);
+    console.log("fila vacia "+ nuevaFila+ " columna vacia" + nuevaColumna);
 }
 
 
@@ -126,6 +126,7 @@ function moverEnDireccion(direccion) {
 
   //COMPLETAR: Agregar la dirección del movimiento al arreglo de movimientos
   movimientos.push(direccion);
+  //addLastMoveToMovimientos(direccion);
     }
 }
 
