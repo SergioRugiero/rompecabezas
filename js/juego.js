@@ -81,11 +81,12 @@ function posicionValida(fila, columna) {
     if (0 <= fila && fila <= 2 && 0 <= columna && columna <= 2) {
       result = true;
       console.log("valido");
+      return posicionValida;
     }else{
       result = false;
       console.log("no valido");
+      return posicionValida;
     }
-    return posicionValida;
 }
 
 /* Movimiento de fichas, en este caso la que se mueve es la blanca intercambiando su posición con otro elemento.
