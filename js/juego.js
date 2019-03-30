@@ -82,8 +82,10 @@ function posicionValida(fila, columna) {
       result = true;
       console.log("valido");
     }else{
+      result = false;
       console.log("no valido");
     }
+    return posicionValida;
 }
 
 /* Movimiento de fichas, en este caso la que se mueve es la blanca intercambiando su posición con otro elemento.
@@ -125,8 +127,7 @@ function moverEnDireccion(direccion) {
         actualizarPosicionVacia(nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
 
   //COMPLETAR: Agregar la dirección del movimiento al arreglo de movimientos
-  movimientos.push(direccion);
-  //addLastMoveToMovimientos(direccion);
+  addLastMoveToMovimientos(direccion);
     }
 }
 
