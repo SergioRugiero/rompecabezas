@@ -59,11 +59,11 @@ En vez de intercambiar esos valores vamos a terminar teniendo en ambas posicione
 Se te ocurre cómo solucionar esto con una variable temporal?
 */
 function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPos2) {
-    console.log("grilla antes de tocarla "+grilla.toString());
-    var pos1 = grilla[filaPos1][columnaPos1];
-    var pos2 = grilla[filaPos2][columnaPos2];
+
+    let pos1grilla = grilla[filaPos1][columnaPos1];
+    var pos2grilla = grilla[filaPos2][columnaPos2];
     grilla[filaPos1][columnaPos1] = grilla[filaPos2][columnaPos2];
-    grilla[filaPos2][columnaPos2] = pos1;
+    grilla[filaPos2][columnaPos2] = pos1grilla;
     console.log("grilla despues de tocarla "+grilla.toString());
 }
 
@@ -71,17 +71,16 @@ function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPo
 function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
     filaVacia = nuevaFila;
     columnaVacia = nuevaColumna;
-    console.log("fila vacia "+ nuevaFila+ " columna vacia " + nuevaColumna);
+    console.log("Valor 9 ahora en "+ filaVacia + columnaVacia);
 }
 
 
 // Para chequear si la posición está dentro de la grilla.
 function posicionValida(fila, columna) {
-    var result = false;
     if (fila >= 0 && fila <= 2 && columna >= 0 && columna <= 2) {
-      result = true;
-      console.log(result);
-      return posicionValida;
+      return true;
+    }else {
+      return false;
     }
 }
 
@@ -95,28 +94,24 @@ function moverEnDireccion(direccion) {
   if (direccion === codigosDireccion.ABAJO) {
     nuevaFilaPiezaVacia = filaVacia - 1;
     nuevaColumnaPiezaVacia = columnaVacia;
-    console.log("movi abajo " + nuevaFilaPiezaVacia + " " + nuevaColumnaPiezaVacia);
   }
 
   // Mueve pieza hacia arriba, reemplazandola con la blanca
   else if (direccion === codigosDireccion.ARRIBA) {
     nuevaFilaPiezaVacia = filaVacia + 1;
     nuevaColumnaPiezaVacia = columnaVacia;
-    console.log("movi arriba " + nuevaFilaPiezaVacia + " " + nuevaColumnaPiezaVacia);
   }
 
   // Mueve pieza hacia la derecha, reemplazandola con la blanca
   else if (direccion === codigosDireccion.DERECHA) {
     nuevaFilaPiezaVacia = filaVacia;
-    nuevaColumnaPiezaVacia = columnaVacia + 1;
-    console.log("movi a la derecha " + nuevaFilaPiezaVacia + " " + nuevaColumnaPiezaVacia);
+    nuevaColumnaPiezaVacia = columnaVacia - 1;
   }
 
   // Mueve pieza hacia la izquierda, reemplazandola con la blanca
   else if (direccion === codigosDireccion.IZQUIERDA) {
     nuevaFilaPiezaVacia = filaVacia;
-    nuevaColumnaPiezaVacia = columnaVacia - 1;
-    console.log("movi a la izquierda " + nuevaFilaPiezaVacia + " " + nuevaColumnaPiezaVacia);
+    nuevaColumnaPiezaVacia = columnaVacia + 1;
   }
 
   /* A continuación se chequea si la nueva posición es válida, si lo es, se intercambia.
@@ -252,7 +247,7 @@ function capturarTeclas() {
         var gano = chequearSiGano();
         if (gano) {
           setTimeout(function() {
-              mostrarCartelGanador();// anulado el ganar
+              //mostrarCartelGanador();// anulado el ganar
               }, 500);
             }
             evento.preventDefault();
