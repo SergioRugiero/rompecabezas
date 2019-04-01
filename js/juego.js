@@ -247,7 +247,7 @@ function capturarTeclas() {
         var gano = chequearSiGano();
         if (gano) {
           setTimeout(function() {
-              //mostrarCartelGanador();// anulado el ganar
+              mostrarCartelGanador();
               }, 500);
             }
             evento.preventDefault();
@@ -260,7 +260,7 @@ y ejecutando la función para que se capturen las teclas que
 presiona el usuario */
 function iniciar() {
     mostrarInstrucciones(instrucciones);
-    //mezclarPiezas(30);
+    mezclarPiezas(30);
     capturarTeclas();
 }
 

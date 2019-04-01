@@ -59,6 +59,7 @@ li::before {
 #juego{
   height: 600px;
   width: 600px;
+  padding: 0.5px;
 }
 
 #juego div {
@@ -66,10 +67,15 @@ li::before {
   animation: fadein 2s;
 }
 
-.pieza img{
-  max-width: 33%;
+.pieza {
+  width: 200px;
+  height: 200px;
   float: left;
-  padding: 1px;
+  }
+
+.pieza img{
+  padding: 0.5px;
+  max-width:99.9%;
 }
 
 @keyframes fadein {
