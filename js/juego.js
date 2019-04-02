@@ -3,6 +3,52 @@ var instrucciones = ["Debes utilizar las flechas para moverte","Utiliza el tecla
 // Arreglo para ir guardando los movimientos que se vayan realizando
 var movimientos = [];
 
+/* agregué una función para resolver el puzzle*/
+var solucion = [];
+
+function invertirMovimientos(){
+    //agrego al array solucion los movimientos en orden invertido:
+    for (let i = 0; i < movimientos.length; i++){
+      solucion.unshift(movimientos[i]);
+    }
+  resolver();
+}
+
+function movInvertidos(movimiento){
+
+  switch (movimiento) {
+    case 39:
+          return 37;
+      break;
+
+    case 40:
+          return 38;
+      break;
+
+    case 37:
+          return 39;
+      break;
+
+    case 38:
+          return 40;
+      break;
+
+    default:
+
+  }
+
+}
+
+function resolver(){
+
+  for (let i = 0; i < solucion.length; i++) {
+    moverEnDireccion(movInvertidos(solucion[i]));
+  }
+
+}
+
+//cierro el comentario de las funciones que resuelven el puzzle.
+
 // Representación de la grilla. Cada número representa a una pieza.
 // El 9 es la posición vacía
 var grilla = [
