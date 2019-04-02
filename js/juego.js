@@ -3,7 +3,7 @@ var instrucciones = ["Debes utilizar las flechas para moverte","Utiliza el tecla
 // Arreglo para ir guardando los movimientos que se vayan realizando
 var movimientos = [];
 
-/* agregué una función para resolver el puzzle*/
+// agregué una función para resolver el puzzle
 var solucion = [];
 
 function invertirMovimientos(){
@@ -20,23 +20,17 @@ function movInvertidos(movimiento){
     case 39:
           return 37;
       break;
-
     case 40:
           return 38;
       break;
-
     case 37:
           return 39;
       break;
-
     case 38:
           return 40;
       break;
-
     default:
-
   }
-
 }
 
 function resolver(){
@@ -47,10 +41,8 @@ function resolver(){
   movimientos = [];
   solucion = [];
   setTimeout(function() {
-      mostrarCartelGanador();
       alert("Cheater!");
       }, 500);
-
 }
 
 //cierro el comentario de las funciones que resuelven el puzzle.
@@ -116,14 +108,14 @@ function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPo
     var pos2grilla = grilla[filaPos2][columnaPos2];
     grilla[filaPos1][columnaPos1] = grilla[filaPos2][columnaPos2];
     grilla[filaPos2][columnaPos2] = pos1grilla;
-    console.log("grilla despues de tocarla "+grilla.toString());
+    //console.log("grilla despues de tocarla "+grilla.toString());
 }
 
 // Actualiza la posición de la pieza vacía
 function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
     filaVacia = nuevaFila;
     columnaVacia = nuevaColumna;
-    console.log("Valor 9 ahora en "+ filaVacia + columnaVacia);
+    //console.log("Valor 9 ahora en "+ filaVacia + columnaVacia);
 }
 
 
