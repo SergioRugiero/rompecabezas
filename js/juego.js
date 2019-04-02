@@ -44,6 +44,12 @@ function resolver(){
   for (let i = 0; i < solucion.length; i++) {
     moverEnDireccion(movInvertidos(solucion[i]));
   }
+  movimientos = [];
+  solucion = [];
+  setTimeout(function() {
+      mostrarCartelGanador();
+      alert("Cheater!");
+      }, 500);
 
 }
 
