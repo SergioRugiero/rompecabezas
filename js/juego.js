@@ -16,21 +16,21 @@ function invertirMovimientos(){
 
 function movInvertidos(movimiento){
 
-  switch (movimiento) {
-    case 39:
-          return 37;
-      break;
-    case 40:
-          return 38;
-      break;
-    case 37:
-          return 39;
-      break;
-    case 38:
-          return 40;
-      break;
-    default:
-  }
+    switch (movimiento) {
+      case 39:
+            return 37;
+        break;
+      case 40:
+            return 38;
+        break;
+      case 37:
+            return 39;
+        break;
+      case 38:
+            return 40;
+        break;
+      default:
+    }
 }
 
 function resolver(){
@@ -65,17 +65,17 @@ Cada elemento de este arreglo deberá ser mostrado en la lista con id 'lista-ins
 Para eso deberás usar la función ya implementada mostrarInstruccionEnLista().
 Podés ver su implementación en la ultima parte de este codigo. */
 function mostrarInstrucciones(instrucciones) {
-  for (var i = 0; i < instrucciones.length; i++) {
-    mostrarInstruccionEnLista(instrucciones[i], "lista-instrucciones");//COMPLETAR
-  }
+    for (var i = 0; i < instrucciones.length; i++) {
+      mostrarInstruccionEnLista(instrucciones[i], "lista-instrucciones");//COMPLETAR
+    }
 }
 
 /* COMPLETAR: Crear función que agregue la última dirección al arreglo de movimientos
 
 y utilice actualizarUltimoMovimiento para mostrarlo en pantalla */
 function addLastMoveToMovimientos(movimiento){
-  movimientos.push(movimiento);
-  actualizarUltimoMovimiento(movimiento);
+    movimientos.push(movimiento);
+    actualizarUltimoMovimiento(movimiento);
 }
 
 /* Esta función va a chequear si el Rompecabezas esta en la posicion ganadora.
@@ -89,7 +89,7 @@ function chequearSiGano() {
 
 // Implementar alguna forma de mostrar un cartel que avise que ganaste el juego
 function mostrarCartelGanador() {
-  alert("¡Felicitaciones lo lograste!");
+    alert("¡Felicitaciones lo lograste!");
 }
 
 /* Función que intercambia dos posiciones en la grilla.
@@ -121,7 +121,7 @@ function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
 
 // Para chequear si la posición está dentro de la grilla.
 function posicionValida(fila, columna) {
-return (fila >= 0 && fila <= 2 && columna >= 0 && columna <= 2);   
+    return (fila >= 0 && fila <= 2 && columna >= 0 && columna <= 2);   
 }
 
 /* Movimiento de fichas, en este caso la que se mueve es la blanca intercambiando su posición con otro elemento.
@@ -194,12 +194,12 @@ var codigosDireccion = {
 el intercambio en la pantalla (DOM). Para que funcione debera estar implementada
 la funcion intercambiarPosicionesGrilla() */
 function intercambiarPosiciones(fila1, columna1, fila2, columna2) {
-  // Intercambio posiciones en la grilla
-  var pieza1 = grilla[fila1][columna1];
-  var pieza2 = grilla[fila2][columna2];
+    // Intercambio posiciones en la grilla
+    var pieza1 = grilla[fila1][columna1];
+    var pieza2 = grilla[fila2][columna2];
 
-  intercambiarPosicionesGrilla(fila1, columna1, fila2, columna2);
-  intercambiarPosicionesDOM('pieza' + pieza1, 'pieza' + pieza2);
+    intercambiarPosicionesGrilla(fila1, columna1, fila2, columna2);
+    intercambiarPosicionesDOM('pieza' + pieza1, 'pieza' + pieza2);
 
 }
 
